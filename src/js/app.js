@@ -14,7 +14,6 @@ import "../style/index.css";
         github: null,
         linkedin: null,
         instagram: null,
-
         name: null,
         lastname: null,
         role: null,
@@ -35,23 +34,23 @@ function render(variables = {}) {
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name === null ? "Name" : variables.name} ${
     variables.lastname === null ? "Lastname" : variables.lastname
-  } </h1>
-          <h2>${variables["role"] === null ? "Role" : variables["role"]}</h2>
+  }</h1>
+          <h2>${variables.role === null ? "Role" : variables.role}</h2>
           <h3>${variables.city === null ? "City" : variables.city}, ${
     variables.country === null ? "Country" : variables.country
   }</h3>
-          <ul class="position-right">
-            <li><a target="_blank" href="https://twitter.com/${
-              variables["twitter"]
+          <ul class="${variables.socialMediaPosition}">
+            <li><a href="https://twitter.com/${
+              variables.twitter
             }"><i class="fab fa-twitter"></i></a></li>
-            <li><a target="_blank" href="https://github.com/${
-              variables["github"]
+            <li><a href="https://github.com/${
+              variables.github
             }"><i class="fab fa-github"></i></a></li>
-            <li><a target="_blank" href="https://linkedin.com/${
-              variables["linkedin"]
-            }"><i class="fab fa-linkedin"></i></a></li>
-            <li><a target="_blank" href="https://instagram.com/${
-              variables["instagram"]
+            <li><a href="https://linkedin.com/${
+              variables.linkedin
+            }}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram
             }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
@@ -73,7 +72,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: null,
+    github: "alesanchezr",
     linkedin: null,
     instagram: null,
     name: null,
